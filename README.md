@@ -3,11 +3,8 @@
 
 # Static websites
 
-Ja, **DigitalOcean** bietet ebenfalls Lösungen für deine Anforderungen, insbesondere über ihr **App Platform** oder das klassische **Spaces + CDN** Setup. Hier ist, wie du das mit DigitalOcean umsetzen kannst:
 
----
-
-### **1. DigitalOcean App Platform**  
+## **1. DigitalOcean App Platform**  
 - **Was es ist:** Eine Platform-as-a-Service (PaaS) Lösung, ähnlich wie Vercel oder Netlify, die speziell dafür gebaut wurde, einfache Deployments für statische Webseiten und Anwendungen zu ermöglichen.  
 - **Vorteile:**  
   - Automatische Skalierung je nach Traffic.
@@ -20,7 +17,24 @@ Ja, **DigitalOcean** bietet ebenfalls Lösungen für deine Anforderungen, insbes
   2. Gehe auf "App Platform".  
   3. Wähle dein Git-Repo aus oder lade deine Webseite direkt hoch.  
   4. DigitalOcean erstellt automatisch ein Hosting-Setup für deine statische Seite.  
-  5. Optional: Konfiguriere eine eigene Domain (kostenloses HTTPS inklusive).  
+  5. Optional: Konfiguriere eine eigene Domain (kostenloses HTTPS inklusive).
+
+  **HOW TO SETUP DOMAIN**
+  Option1: You can let digital ocean control your domain by adding digital ocean namespaces to the control area of your domain hoster
+  Option2: Choose your domain hoster for controling the dns.
+  ```
+  # This is for root domain example.com
+  Type: CNAME Record
+  Host: wwww
+  Value: your digital ocean app link
+  TTL: automatic
+  
+  # This is for sub domain www.example.com
+  Type: ALIAS Record
+  Host: @
+  Value: your digital ocean app link
+  TTL: automatic
+  ```
 
 - **Kosten:**  
   - Es gibt einen **kostenlosen Starter-Plan**, der schon für viele statische Webseiten ausreicht.  
