@@ -36,6 +36,16 @@
   TTL: automatic
   ```
 
+  If you want that https://example.com always gets redirected to https://www.example.com then set at your domain hoster:
+  ```
+  Record type: URL Redirect record (Unmasked)
+  Host: @
+  Value: https://www.example.com/
+  ```
+
+
+  
+
 - **Kosten:**  
   - Es gibt einen **kostenlosen Starter-Plan**, der schon für viele statische Webseiten ausreicht.  
   - Für höhere Skalierung (z. B. Millionen von Besuchern), könntest du auf einen kostenpflichtigen Plan upgraden, der ab $5/Monat startet.  
